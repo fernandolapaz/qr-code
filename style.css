@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
+:root {
+    --clr-body-bg: hsl(212, 45%, 89%);
+    --clr-neutral-1: hsl(0, 0%, 100%);
+    --clr-neutral-2: hsl(220, 15%, 48%);
+    --clr-neutral-3: hsl(218, 44%, 22%);
+    --clr-attribution: hsl(228, 45%, 44%);
+
+    --ff: 'Outfit', sans-serif;
+
+    --fs: 0.96rem;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+picture,
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1;
+    display: grid;
+    place-content: center;
+    gap: 1rem;
+    background-color: var(--clr-body-bg);
+    padding: 1.75rem;
+}
+
+/* Main (card) */
+.card {
+    background-color: var(--clr-neutral-1);
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 20rem;
+}
+
+.img {
+    border-radius: 0.6rem;
+}
+
+.info {
+    display: grid;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    font-family: var(--ff);
+    line-height: 1.25;
+}
+
+.title {
+    font-size: 1.4rem;
+    color: var(--clr-neutral-3);
+}
+
+.description {
+    font-size: var(--fs);
+    color: var(--clr-neutral-2);
+}
+
+/* Footer */
+.attribution {
+    font-size: 0.75rem;
+    text-align: center;
+    color: var(--clr-neutral-3);
+}
+
+.attribution a {
+    color: var(--clr-attribution);
+}
+
+@media screen and (min-height: 40rem) {
+    .attribution {
+        position: fixed;
+        bottom: 1rem;
+        justify-self: center;
+    }
+}
+
+/* Theme switcher */
+.dark-mode {
+    --clr-body-bg: hsl(212, 45%, 19%);
+    --clr-neutral-1: hsl(0, 0%, 12%);
+    --clr-neutral-2: hsl(220, 15%, 75%);
+    --clr-neutral-3: hsl(218, 44%, 92%);
+    --clr-attribution: hsl(228, 45%, 74%);
+}
+
+header {
+    text-align: center;
+}
+
+@media screen and (min-height: 40rem) {
+    header {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+    }
+}
+
+.theme-switcher {
+    background-color: transparent;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
